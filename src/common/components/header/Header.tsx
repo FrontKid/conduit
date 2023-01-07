@@ -5,14 +5,14 @@ import { Container } from '../container/Container'
 //interface Props { }
 
 export const Header: FC = () => {
-  const navLinksCalasses = ({ isActive }: { isActive: boolean }): string => clsx('py-navItem', {
+  const navLinksCalasses = ({ isActive }: { isActive: boolean }): string => clsx('py-navItem hover:text-black/60 hover:no-underline', {
     'text-black/30': !isActive,
     'text-black/80': isActive
   })
 
   return (
     <header>
-      <nav className='px-2 py-4'>
+      <nav className='py-2 px-4'>
         <Container>
           <div className="flex justify-between items-center">
             <Link className='font-titillium text-2xl mr-8 text-conduit-green' to='/'>conduit</Link>
