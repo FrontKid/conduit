@@ -4,7 +4,7 @@ import { FC } from 'react'
 //components
 import { Header } from './common/components/header/Header'
 import { Banner } from './common/components/banner/Banner'
-import { Article } from './modules/feed/components/article/Article'
+import { Feed } from './modules/feed/components/feed/Feed'
 //interface Props { }
 
 export const App: FC = () => {
@@ -12,7 +12,7 @@ export const App: FC = () => {
     <div>
       <Header />
       <Banner />
-      <Article />
+      <Feed />
     </div>
   )
 }
