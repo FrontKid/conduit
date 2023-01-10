@@ -4,12 +4,12 @@ import { IFeedArticle } from '../../data/dto/global-feed-in'
 import { Article } from '../article/Article'
 
 interface IArticleList {
-  list: IFeedArticle[]
+  list: IFeedArticle[];
 }
 
 export const ArticleList: FC<IArticleList> = ({ list }) => {
   return (
-    <div className='w-3/4'>
+    <div>
       {list.map(article => <Article key={getRandomKey()} {...article} />)}
     </div>
   )
