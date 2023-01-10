@@ -1,7 +1,9 @@
 import { FC } from 'react'
-//interface Props { }
+interface IFavoriteButtonProps {
+  count: number;
+}
 
-export const FavoriteButton: FC = () => {
+export const FavoriteButton: FC<IFavoriteButtonProps> = ({ count }) => {
   return (
     <button className='text-conduit-green
       border-conduit-green
@@ -19,7 +21,7 @@ export const FavoriteButton: FC = () => {
       focus:bg-conduit-darkGreen
       transition-colors'>
       <i className='ion-heart' />
-      <span className='ml-1 font-normal'>70</span>
+      <span className='ml-1 font-normal'>{count}</span>
     </button>
   )
 }

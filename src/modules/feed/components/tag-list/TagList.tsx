@@ -1,34 +1,21 @@
 import { FC } from 'react'
+import { v4 as getRandomKey } from 'uuid'
+interface ITagList {
+  list: string[];
+}
 
-//interface ITagList { }
-
-export const TagList: FC = () => {
+export const TagList: FC<ITagList> = ({ list }) => {
   return (
     <ul className='flex'>
-      <li
-        className='font-light text-date
-        border border-conduit-lightenGray
+      {list.map(tag => (
+        <li
+          key={getRandomKey()}
+          className='font-light text-date
+          border border-conduit-lightenGray
         text-conduit-tag mr-1 mb-0.2 px-tag rounded-tag'>
-        voluptate
-      </li>
-      <li
-        className='font-light text-date
-        border border-conduit-lightenGray
-        text-conduit-tag mr-1 mb-0.2 px-tag rounded-tag'>
-        voluptate
-      </li>
-      <li
-        className='font-light text-date
-        border border-conduit-lightenGray
-        text-conduit-tag mr-1 mb-0.2 px-tag rounded-tag'>
-        voluptate
-      </li>
-      <li
-        className='font-light text-date
-        border border-conduit-lightenGray
-        text-conduit-tag mr-1 mb-0.2 px-tag rounded-tag'>
-        voluptate
-      </li>
+          {tag}
+        </li>
+      ))}
     </ul>
   )
 }
